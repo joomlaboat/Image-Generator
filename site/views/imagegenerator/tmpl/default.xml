@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+        <layout title="COM_IMAGEGENERATOR_VIEW_DEFAULT_TITLE">
+                <message>COM_IMAGEGENERATOR_VIEW_DEFAULT_DESC</message>
+        </layout>
+        
+        <fields
+                name="params"
+               
+        >
+                <fieldset name="basic" addfieldpath="administrator/components/com_imagegenerator/models/fields/">
+
+                        <field
+                                name="imageid"
+                                type="imageprofiles"
+                                label="COM_IMAGEGENERATOR_FIELD_NAME_LABEL"
+                                description="COM_IMAGEGENERATOR_FIELD_NAME_DESC"
+                        />
+                </fieldset>
+        </fields>
+</metadata>

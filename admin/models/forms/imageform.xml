@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form
+        addrulepath="administrator/components/com_imagegenerator/models/rules"
+         
+      >
+
+        <fieldset addfieldpath="administrator/components/com_imagegenerator/models/fields">
+                <field
+                        name="id"
+                        type="hidden"
+                />
+                
+                <field
+                        name="profilename"
+                        type="text"
+                        label="COM_IMAGEGENERATOR_FIELD_NAME_LABEL"
+                        description="COM_IMAGEGENERATOR_FIELD_NAME_DESC"
+                        size="40"
+                        class="inputbox"
+
+                        required="true"
+                        default=""
+                />
+
+		<field
+                        name="width"
+                        type="text"
+                        label="COM_IMAGEGENERATOR_FIELD_WIDTH_LABEL"
+                        description="COM_IMAGEGENERATOR_FIELD_WIDTH_DESC"
+                        size="5"
+                        class="inputbox"
+
+                        required="true"
+                        default="500"
+                />
+
+		<field
+                        name="height"
+                        type="text"
+                        label="COM_IMAGEGENERATOR_FIELD_HEIGHT_LABEL"
+                        description="COM_IMAGEGENERATOR_FIELD_HEIGHT_DESC"
+                        size="5"
+                        class="inputbox"
+
+                        required="true"
+                        default="500"
+                />
+
+		<field
+                        name="background"
+                        type="text"
+                        label="COM_IMAGEGENERATOR_FIELD_BACKGROUNDCOLOR_LABEL"
+                        description="COM_IMAGEGENERATOR_FIELD_BACKGROUNDCOLOR_DESC"
+                        size="6"
+                        class="jscolor"
+
+                        required="true"
+                        default="FFFFFF"
+                />
+
+		<field type="radio" name="fileformat" default="2" class="radio btn-group" label="COM_IMAGEGENERATOR_FIELD_FILEFORMAT_LABEL" description="COM_IMAGEGENERATOR_FIELD_FILEFORMAT_DESC" >
+				  <option value="1">gif</option>
+				  <option value="2">jpg</option>
+				  <option value="3">png</option>
+				  <option value="100">pdf</option>
+		</field>
+
+		<field
+                        name="fileformatparam"
+                        type="text"
+                        label="COM_IMAGEGENERATOR_FIELD_FILEFORMATPARAM_LABEL"
+                        description="COM_IMAGEGENERATOR_FIELD_FILEFORMATPARAM_DESC"
+                        size="10"
+                        class="inputbox"
+
+                        required="false"
+                        default="80"
+                />
+
+		<field
+                        name="outputfilename"
+                        type="text"
+                        label="COM_IMAGEGENERATOR_FIELD_FILENAME_LABEL"
+                        description="COM_IMAGEGENERATOR_FIELD_FILENAME_DESC"
+                        size="255"
+                        class="inputbox"
+
+                        required="false"
+                        default="image"
+                />
+
+
+
+
+                
+                <field
+                        name="options"
+                        type="textarea"
+                        label="COM_IMAGEGENERATOR_FIELD_OPTIONS_LABEL"
+                        description="COM_IMAGEGENERATOR_FIELD_OPTIONS_DESC"
+                        class="iginputbox"
+                        default=""
+                        cols="100"
+                        rows="28"
+
+                />
+
+
+
+                
+        </fieldset>
+
+</form>
