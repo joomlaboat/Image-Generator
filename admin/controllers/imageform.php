@@ -2,7 +2,7 @@
 /**
  * ImageGenerator Joomla! Native Component
  * @version 1.0.0
- * @author Ivan Komlev< <support@joomlaboat.com>
+ * @author Ivan Komlev <support@joomlaboat.com>
  * @link http://www.joomlaboat.com
  * @GNU General Public License
  **/
