@@ -58,18 +58,12 @@ class imagegeneratorViewimagelist extends JViewLegacy
                 $search			= $mainframe->getUserStateFromRequest($context."search",'search','',	'string' );
                 $search			= JString::strtolower( $search );
                 
-                $lists['search']=$search;
+                $this->lists['search']=$search;
                 
                 
                 $filter_category= $mainframe->getUserStateFromRequest($context."filter_category",'filter_category','',	'integer' );
-                
-                
-               // $available_categories=$this->getAllCategories();
+               
                 $javascript = 'onchange="document.adminForm.submit();"';
-                //$lists['categories']=JHTML::_('select.genericlist', $available_categories, 'filter_category', $javascript ,'id','categoryname', $filter_category);
-                
-                $this->assignRef('lists', $lists);
-                
                 
                 // Display the template
                 parent::display($tpl);
@@ -155,18 +149,9 @@ class imagegeneratorViewimagelist extends JView
                 $search			= $mainframe->getUserStateFromRequest($context."search",'search','',	'string' );
                 $search			= JString::strtolower( $search );
                 
-                $lists['search']=$search;
+                $this->lists['search']=$search;
                 
-                
-                //$filter_category= $mainframe->getUserStateFromRequest($context."filter_category",'filter_category','',	'integer' );
-                
-                
-                //$available_categories=$this->getAllCategories();
                 $javascript = 'onchange="document.adminForm.submit();"';
-                //$lists['categories']=JHTML::_('select.genericlist', $available_categories, 'filter_category', $javascript ,'id','categoryname', $filter_category);
-                
-                $this->assignRef('lists', $lists);
-                
                 
                 // Display the template
                 parent::display($tpl);
@@ -177,20 +162,15 @@ class imagegeneratorViewimagelist extends JView
         */
         protected function addToolBar() 
         {
-                JToolBarHelper::title(JText::_('COM_IMAGEGENERATOR_IMAGELIST'));
-                
-                
-                JToolBarHelper::addNewX('imageform.add');
-                JToolBarHelper::editListX('imageform.edit');
-                JToolBarHelper::customX( 'imagelist.copyItem', 'copy.png', 'copy_f2.png', 'Copy', true);
-		JToolBarHelper::custom( 'imagelist.updateItem', 'refresh.png', 'refresh_f2.png', 'Update', true);
-		JToolBarHelper::custom( 'imagelist.refreshItem', 'purge.png', 'purge_f2.png', 'Refresh', true);
-                JToolBarHelper::deleteListX('', 'imagelist.delete');
-                
+            JToolBarHelper::title(JText::_('COM_IMAGEGENERATOR_IMAGELIST'));
+              
+            JToolBarHelper::addNewX('imageform.add');
+            JToolBarHelper::editListX('imageform.edit');
+            JToolBarHelper::customX( 'imagelist.copyItem', 'copy.png', 'copy_f2.png', 'Copy', true);
+			JToolBarHelper::custom( 'imagelist.updateItem', 'refresh.png', 'refresh_f2.png', 'Update', true);
+			JToolBarHelper::custom( 'imagelist.refreshItem', 'purge.png', 'purge_f2.png', 'Refresh', true);
+            JToolBarHelper::deleteListX('', 'imagelist.delete');
         }
-        
-        
-       
         
         function array_insert(&$array, $insert, $position = -1)
         {

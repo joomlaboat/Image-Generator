@@ -21,61 +21,55 @@ $JoomlaVersionRelease=$version->RELEASE;
 
 if($JoomlaVersionRelease>=3.0)
 {
-        
-        class ImageGeneratorViewImageGenerator extends JViewLegacy
-        {
+    class ImageGeneratorViewImageGenerator extends JViewLegacy
+    {
         // Overwriting JView display method
         function display($tpl = null) 
         {
-                // Assign data to the view
-		$app		= JFactory::getApplication();
+            // Assign data to the view
+			$app = JFactory::getApplication();
                 
-                $this->Model = $this->getModel();
+            $this->Model = $this->getModel();
 		
-		$this->assignRef('model',$this->Model);
-		$this->assignRef('imageprofile',$this->Model->imageprofile);
-                $this->assignRef('instructions',$this->Model->instructions);
+			$this->imageprofile = $this->Model->imageprofile;
+            $this->instructions = $this->Model->instructions;
 		
-		
-                // Check for errors.
-                if (count($errors = $this->get('Errors'))) 
-                {
-                        JError::raiseError(500, implode('<br />', $errors));
-                        return false;
-                }
-                
+            // Check for errors.
+            if (count($errors = $this->get('Errors'))) 
+            {
+                JError::raiseError(500, implode('<br />', $errors));
+				return false;
+            }
  
-                // Display the view
-                parent::display($tpl);
+            // Display the view
+            parent::display($tpl);
         }
-        }
+	}
 }
 else
 {
-        class ImageGeneratorViewImageGenerator extends JView
-        {
+    class ImageGeneratorViewImageGenerator extends JView
+    {
         // Overwriting JView display method
         function display($tpl = null) 
         {
-                // Assign data to the view
-		$app		= JFactory::getApplication();
+            // Assign data to the view
+			$app = JFactory::getApplication();
 		
-                $this->Model = $this->getModel();
+            $this->Model = $this->getModel();
                 
-		$this->assignRef('model',$this->Model);
-		$this->assignRef('imageprofile',$this->Model->imageprofile);
-                $this->assignRef('instructions',$this->Model->instructions);
+			$this->imageprofile = $this->Model->imageprofile;
+            $this->instructions = $this->Model->instructions;
  
-                // Check for errors.
-                if (count($errors = $this->get('Errors'))) 
-                {
-                        JError::raiseError(500, implode('<br />', $errors));
-                        return false;
-                }
-                
- 
-                // Display the view
-                parent::display($tpl);
+            // Check for errors.
+            if (count($errors = $this->get('Errors'))) 
+            {
+                JError::raiseError(500, implode('<br />', $errors));
+                return false;
+            }
+            
+			// Display the view
+            parent::display($tpl);
         }
-        }  
+    }
 }

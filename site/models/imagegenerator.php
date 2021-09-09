@@ -46,7 +46,7 @@ class ImageGeneratorModelImageGenerator extends JModelItem
 		
 		$query = 'SELECT * FROM `#__imagegenerator_images` WHERE `id`='.(int)$imageid.' LIMIT 1';
 		$db->setQuery($query);
-		if (!$db->query())    die ('cb  render.php 3 err:'. $db->stderr());
+
 		$rows = $db->loadObjectList();
 				
 		if(count($rows)==0)

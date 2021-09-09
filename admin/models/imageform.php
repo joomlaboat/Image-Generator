@@ -100,7 +100,7 @@ class imagegeneratorModelimageform extends JModelAdmin
 				$query='DELETE FROM `#__imagegenerator_images` WHERE `id`='.(int)$cid;
 			
 				$db->setQuery($query);
-				if (!$db->query())    die( $db->stderr());
+				$db->execute();
 				
 				if (!$imageform_row->delete( $cid ))
 					return false;

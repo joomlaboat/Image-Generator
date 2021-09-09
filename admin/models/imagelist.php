@@ -117,7 +117,6 @@ class imagegeneratorModelimagelist extends JModelList
 			$query->where('`id`='.$id);
 			$db->setQuery((string)$query);
 			$rows = $db->loadObjectList();
-			if (!$db->query())    die( $db->stderr());
 					
 			if(count($rows)==0)
 				return array();
