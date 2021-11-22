@@ -197,11 +197,9 @@ class PDFGenerator
 		$this->pdf->Rect($x+$this->x_offset,$y+$this->y_offset, $w, $h, 'DF', $style4, $color);
 	}
 	
-    public function printText($text,$family,$fontsize,$margin_x,$margin_y,$line_height=0,$color_hex,$align="centermiddle")
+    public function printText($text,$family,$fontsize,$margin_x,$margin_y, int $line_height,$color_hex,$align="centermiddle")
     {
-		//echo '$this->x_offset='.$this->x_offset.'<br>';
-	
-		
+		//$line_height=0
 		
 		if(strpos($color_hex,',')!==false)
 		{
@@ -375,12 +373,10 @@ class PDFGenerator
                 }
     }
     
-    
-    protected function placeImageResource($paste_image_file,$x,$y,$new_width,$new_height,$align="left",$ext,$paste_width, $paste_height)
+    protected function placeImageResource($paste_image_file,$x,$y,$new_width,$new_height, string $align,$ext,$paste_width, $paste_height)
     {
+		//$align="left"
         
-                
-
                 if($new_width==0)
                         $new_width=$paste_width/$this->dpmm;
                         
