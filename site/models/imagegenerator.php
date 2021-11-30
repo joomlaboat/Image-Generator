@@ -25,7 +25,7 @@ require_once(JPATH_SITE.DS.'components'.DS.'com_imagegenerator'.DS.'includes'.DS
 class ImageGeneratorModelImageGenerator extends JModelItem
 {
     public $imageprofile;
-    //public $instructions;
+    public $instructions;
     
     function __construct()
 	{

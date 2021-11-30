@@ -312,7 +312,9 @@ class PDFGenerator
                         $imagedata=file_get_contents($paste_image_fileorurl);
 						
 						$ext='';
-						if(strpos($imagedata,'JFIF')!==false)
+						if(strpos($imagedata,'Exif')!==false)
+							$ext='jpg';
+						elseif(strpos($imagedata,'JFIF')!==false)
 							$ext='jpg';
 						elseif(strpos($imagedata,'PNG')!==false)
 							$ext='png';
@@ -329,7 +331,7 @@ class PDFGenerator
 						}
                         else
                         {
-                                echo 'Recourse '.$paste_image_fileorurl.' cannot be loaded.';
+                                echo 'Recourse [332] '.$paste_image_fileorurl.' cannot be loaded.';
                                 die;
                         }   
 

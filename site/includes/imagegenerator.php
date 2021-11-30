@@ -145,15 +145,15 @@ class ImageGenerator
                 {
                         //image from url
                         $imagedata=file_get_contents($paste_image_fileorurl);
-                        if(strpos($imagedata,'JFIF')!==false or strpos($imagedata,'PNG')!==false  or strpos($imagedata,'GIF')!==false)
+                        if(strpos($imagedata,'Exif')!==false strpos($imagedata,'JFIF')!==false or strpos($imagedata,'PNG')!==false  or strpos($imagedata,'GIF')!==false)
                         {
                                 $image = imagecreatefromstring($imagedata);
                                 $this->placeImageResource($image,$x,$y,$new_width,$new_height,$align);
                         }
                         else
                         {
-                                echo 'Recourse '.$paste_image_fileorurl.' cannot be loaded.';
-                                die;
+                            echo 'Recourse [155]'.$paste_image_fileorurl.' cannot be loaded.';
+                            die;
                         }
                 }
                 else
